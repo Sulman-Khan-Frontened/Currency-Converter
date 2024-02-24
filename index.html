@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        .contianer {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, #0f0f0f, #23d3ff1e, #0f0f0f);
+        }
+
+        .box {
+            width: 500px;
+            height: 300px;
+            border-radius: 2px;
+            border: 1px solid rgba(255, 255, 255, 0.52);
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .box>* {
+            margin-block: 10px;
+        }
+
+        .selector {
+            width: 90%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+
+        }
+
+        .selector>select {
+            width: 40%;
+            height: 100%;
+        }
+
+        .selector>input {
+            width: 40%;
+            height: 100%;
+            font-size: 25px;
+            padding-inline: 10px;
+        }
+
+        .button {
+            width: 80%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: royalblue;
+            cursor: pointer;
+        }
+
+        .button>p {
+            font-size: 25px;
+            color: white;
+        }
+
+        @media screen and (width < 768px) {
+            .box {
+                width: 400px;
+            }
+        }
+
+        @media screen and (width < 450px) {
+            .box {
+                width: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contianer">
+        <div class="box">
+            <div class="selector">
+                <select id="currencySelect">
+                    <option value="AUD">Australian Dollar</option>
+                    <option value="BGN">Bulgarian Lev</option>
+                    <option value="BRL">Brazilian Real</option>
+                    <option value="CAD">Canadian Dollar</option>
+                    <option value="CHF">Swiss Franc</option>
+                    <option value="CNY">Chinese Yuan Renminbi</option>
+                    <option value="CZK">Czech Koruna</option>
+                    <option value="DKK">Danish Krone</option>
+                    <option value="EUR">Euro</option>
+                    <option value="GBP">British Pound Sterling</option>
+                    <option value="HKD">Hong Kong Dollar</option>
+                    <option value="HRK">Croatian Kuna</option>
+                    <option value="HUF">Hungarian Forint</option>
+                    <option value="IDR">Indonesian Rupiah</option>
+                    <option value="ILS">Israeli Shekel</option>
+                    <option value="INR">Indian Rupee</option>
+                    <option value="ISK">Icelandic Krona</option>
+                    <option value="JPY">Japanese Yen</option>
+                    <option value="KRW">South Korean Won</option>
+                    <option value="MXN">Mexican Peso</option>
+                    <option value="MYR">Malaysian Ringgit</option>
+                    <option value="NOK">Norwegian Krone</option>
+                    <option value="NZD">New Zealand Dollar</option>
+                    <option value="PHP">Philippine Peso</option>
+                    <option value="PLN">Polish Zloty</option>
+                    <option value="RON">Romanian Leu</option>
+                    <option value="RUB">Russian Ruble</option>
+                    <option value="SEK">Swedish Krona</option>
+                    <option value="SGD">Singapore Dollar</option>
+                    <option value="THB">Thai Baht</option>
+                    <option value="TRY">Turkish Lira</option>
+                    <option value="USD">United States Dollar</option>
+                    <option value="ZAR">South African Rand</option>
+                </select>
+
+                <input type="number" name="" id="write">
+            </div>
+            <div class="selector">
+                <select id="currencychecked">
+                    <option value="AUD">Australian Dollar</option>
+                    <option selected value="BGN">Bulgarian Lev</option>
+                    <option value="BRL">Brazilian Real</option>
+                    <option value="CAD">Canadian Dollar</option>
+                    <option value="CHF">Swiss Franc</option>
+                    <option value="CNY">Chinese Yuan Renminbi</option>
+                    <option value="CZK">Czech Koruna</option>
+                    <option value="DKK">Danish Krone</option>
+                    <option value="EUR">Euro</option>
+                    <option value="GBP">British Pound Sterling</option>
+                    <option value="HKD">Hong Kong Dollar</option>
+                    <option value="HRK">Croatian Kuna</option>
+                    <option value="HUF">Hungarian Forint</option>
+                    <option value="IDR">Indonesian Rupiah</option>
+                    <option value="ILS">Israeli Shekel</option>
+                    <option value="INR">Indian Rupee</option>
+                    <option value="ISK">Icelandic Krona</option>
+                    <option value="JPY">Japanese Yen</option>
+                    <option value="KRW">South Korean Won</option>
+                    <option value="MXN">Mexican Peso</option>
+                    <option value="MYR">Malaysian Ringgit</option>
+                    <option value="NOK">Norwegian Krone</option>
+                    <option value="NZD">New Zealand Dollar</option>
+                    <option value="PHP">Philippine Peso</option>
+                    <option value="PLN">Polish Zloty</option>
+                    <option value="RON">Romanian Leu</option>
+                    <option value="RUB">Russian Ruble</option>
+                    <option value="SEK">Swedish Krona</option>
+                    <option value="SGD">Singapore Dollar</option>
+                    <option value="THB">Thai Baht</option>
+                    <option value="TRY">Turkish Lira</option>
+                    <option value="USD">United States Dollar</option>
+                    <option value="ZAR">South African Rand</option>
+                </select>
+
+                <input type="number" name="" readonly id="read">
+            </div>
+            <div class="button" onclick="find()">
+                <p>Check</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        const find = () => {
+            var Inputval = document.querySelector("#write");
+            var Checkedval = document.querySelector("#read");
+            var currencySelect = document.querySelector("#currencySelect");
+            var currencychecked = document.querySelector("#currencychecked");
+
+            if (Inputval.value != "") {
+                fetch('https://api.freecurrencyapi.com/v1/latest?apikey=fca_live_zlDM9NxaSkZ6MV1ChuCksx23JwNOrSddXsn17OJv')
+                    .then(response => response.json())
+                    .then(data => handleData(data, currencySelect.value, currencychecked.value, Inputval.value));
+            }
+        }
+
+        function handleData(data, fromCurrency, toCurrency, amount) {
+            const fromRate = data.data[fromCurrency];
+            const toRate = data.data[toCurrency];
+            const convertedAmount = (amount * toRate) / fromRate;
+            document.querySelector("#read").value = convertedAmount.toFixed(2);
+        }
+    </script>
+</body>
+
+</html>
